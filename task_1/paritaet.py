@@ -1,12 +1,12 @@
 
 
-def calculate_paritaet(arr):
+def calculate_paritaet(board: list[int]):
     res = []
-    for y in range(len(arr)):
-        cursor = arr[y]
+    for y in range(len(board)):
+        cursor = board[y]
         if (cursor == 0): continue
         for x in range(y):
-            shouldBeSmaller = field[x]
+            shouldBeSmaller = board[x]
             if shouldBeSmaller == 0: continue
             if shouldBeSmaller > cursor:
                 res.append((cursor, shouldBeSmaller))

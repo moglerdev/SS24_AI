@@ -1,19 +1,19 @@
 from board import calculate_distance
 
-def calculate_h1(arr):
+def calculate_h1(board: list[int]):
     res = 0
-    for i in range(len(arr)):
-        cursor = arr[i]
+    for i in range(len(board)):
+        cursor = board[i]
         if (cursor == 0 or cursor == i): continue
         res = res + 1
     return res
 
-def calculate_h2(arr):
+def calculate_h2(board: list[int]):
     res = 0
-    for i in range(len(arr)):
-        cursor = arr[i]
+    for i in range(len(board)):
+        cursor = board[i]
         if (cursor == 0): continue
-        t = calculate_distance(cursor, i, arr)
+        t = calculate_distance(cursor, i, board)
         res = res + t
     return res
 
